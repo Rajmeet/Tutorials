@@ -1,0 +1,210 @@
+<!-- This page was built using Bootstrap 4 and JQuery -->
+<!--  Bootstrap is a CSS framework containing a lot of prebuilt classes for components-->
+<!-- Documentation at https://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
+<!-- JQuery is a JS library...See home.js for more details -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- ☝️This meta tag is super important -->
+  <!-- Bootstrap CSS -->
+  <!-- We're loading the required css file from a CDN (Content Delivery Network) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <!-- First we're gonna make a navbar -->
+  <!-- How do you remember all this stuff 👇 😧 ?? -->
+  <!-- It's quite simple - you refer the documentation :
+     https://getbootstrap.com/docs/4.3/components/navbar/ -->
+  <!-- And then make the required changes...-->
+  <!-- Sometimes even whole templates are available.
+     As long as it's open sourced and free, please make use of them
+     instead of wasting time trying to make everything from scratch-->
+  <!-- Most of what's given below is taken from various sources (mostly documentation) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <!--Sticky top ensures the navbar stays on top-->
+    <a class="navbar-brand" href="#">
+      <img src="/assets/apple_logo_grey.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
+      &nbsp;Brand Name
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- ml-auto instead of mr-auto will make it right aligned -->
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <!-- Try changing this class to container-fluid and see what happens...What's the difference ?-->
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 style="text-align: center">Bootstrap - Some tips</h1>
+        <p>
+          Bootstrap has a powerful container and grid based layout system that
+          allows mobile first/ mobile friendly design as the web page
+          reorganizes itself automatically with the changing screen sizes. This
+          page viewed on a smaller screen (change your browser window size to
+          test it out) will display differently with the two columns below
+          stacked, instead of side by side...And this row,including the headline displays properly with appropriate
+          padding
+          no matter how much you shrink the page.<br />
+          In fact the whole page below the navbar is inside what we call a
+          container..I've used horizontal lines(<code>&lt;hr&gt;</code>) to demarcate each row.<br />
+          Learn more here :
+          <a href="https://getbootstrap.com/docs/4.0/layout/overview/">Bootstrap Layout</a>
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>
+          Now there's a lot of stuff in Bootstrap that needs to be understood
+          like the grid system for example.. <br />
+          Here's where you can get started :
+          <a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap Grid System</a><br>
+          Here's an example of the extent to which you can control the grid layout of your page (taken from the
+          documentation).
+          Change the browser window size and see what happens (Alternatively, you can go to your Developer Tools
+          (<kbd>Ctrl+Shift+I</kbd>)
+          and choose Responsive Developer Mode [<kbd>Ctrl+Shift+M</kbd> on Firefox]):<br>
+          <div class="container bg-success">
+            <div class="row justify-content-md-center">
+              <div class="col col-lg-2 bg-primary">
+                1 of 3
+              </div>
+              <div class="col-md-auto bg-secondary">
+                Variable width content
+              </div>
+              <div class="col col-lg-2 bg-primary">
+                3 of 3
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col bg-primary">
+                1 of 3
+              </div>
+              <div class="col-md-auto bg-secondary">
+                Variable width content
+              </div>
+              <div class="col col-lg-2 bg-primary">
+                3 of 3
+              </div>
+            </div>
+          </div>
+          As you can see, when you shrink the page down to mobile screen sizes
+          (below the sm <a
+            href="https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints">breakpoint</a> in this
+          case),
+          the two columns stack on top of each other.
+        </p>
+      </div>
+      <div class="col-sm-6">
+        <p>
+          But the other things like buttons,cards,inputs and other components
+          can just be referred to from the documentation.
+          <br />For example:<br />
+          Here's a button styled with some bootstrap classes: <br />
+          <button class="btn btn-primary" onclick="alert('Onclick attribute can be used to execute a handler')">Click me
+            😀</button><br />
+          Compare this to a default boring html button :
+          <button onclick="dialog('But that is a very old method and not used anymore')">Click me 😒</button><br />
+          As you can see,all I had to add were two predefined classes ("btn" &
+          "btn-primary"), and it changed the whole feel of the button,right
+          down to the click animation.<br />
+          There are <b>many</b> other changes you can make to a button. Head
+          over to the
+          <a href="https://getbootstrap.com/docs/4.0/components/buttons/">documentation</a>
+          to find out.<br />
+          You can even find many components that are not actually native html
+          elements like
+          <a href="https://getbootstrap.com/docs/4.0/components/card/">cards</a>,
+          <a href="https://getbootstrap.com/docs/4.0/components/modal/">modals</a>
+          and
+          <a href="https://getbootstrap.com/docs/4.0/components/carousel/">carousels</a>.<br />
+          I'll leave it up to you to explore all of these.
+        </p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>On to Jquery</h1>
+        <p>Jquery is a javascript library.It makes things like HTML document traversal and manipulation, event handling,
+          animation, and Ajax much simpler.<br>
+          Here's an example.See <i>home.js</i> for the code : <br><br>
+          <input type="text" id="inp-1" class="form-control" placeholder="Type something in"><br>
+          <button class="btn btn-primary" id="btn-1"> Click me</button>
+          <button class="btn btn-info" id="btn-2">Hide/Show outputs</button><br>
+          <div id="output-block" class="bg-info">
+            <h2>Output(1): <span id="output-1"></span></h2>
+            <h2>Output(2): <span id="output-2"></span></h2>
+          </div>
+          As you saw above, JQuery can not just improve the ease of coding and simplify DOM manipulation,
+          it can also perform CSS animations easily.<br><br>
+          <b>Another example:</b> <br><br>
+          <input id="inp-add-item" type="text" class="form-control" placeholder="Type an item and press enter"><br>
+          <h5>You are typing : <span id="output-add-item"></span></h5>
+          <h5>Items: </h5>
+          <ul id="item-list" class="list-group">
+            <li class="list-group-item list-group-item-primary">Example item<span class="close">&times;</span></li>
+          </ul>
+          I have given you a brief introduction to Jquery and included everything that's necessary for common
+          use cases in the examples.I haven't included any Ajax as it is an advanced topic - You can learn it on your
+          own
+          once you learn about web requests and api endpoints.
+          <br>
+          <b>Documentations & videos: </b><br>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-info"><a href="https://api.jquery.com/">Jquery Official
+                Documentation</a></li>
+            <li class="list-group-item list-group-item-info"><a href="https://www.w3schools.com/jquery/">w3Schools
+                Jquery Tutorial</a></li>
+            <li class="list-group-item list-group-item-info">And Stack Overflow above all</li>
+          </ul>
+
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- All of these files are loaded from CDNs -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Note that we used the full version of Jquery...For Bootstrap to work and for common requirements,
+    the slim version is enough -->
+  <!-- If you want to view the unminified code of any of these, just remove 'min.' from 
+    the links and view them in a browser -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/home.js"></script>
+</body>
+
+</html>
